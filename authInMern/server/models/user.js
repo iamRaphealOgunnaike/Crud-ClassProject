@@ -21,7 +21,7 @@ const validate =(data)=>{
     const schema = joi.object({
         firstName:joi.string().required().label('Firstname'),
         lastName:joi.string().required().label('Lastname'),
-        email:joi.string().required().label('Email'),
+        email:joi.string().email().required().label('Email'),
         password:joi.passwordComplexity().required().label('Password'),
     });
     return schema.validate(data)
