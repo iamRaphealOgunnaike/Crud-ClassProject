@@ -3,8 +3,10 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 const connection = require("./db");
-const userRoutes = require("../route/users");
-const authRoutes = require("../route/auth");
+const userRoutes = require('../server/routes/users')
+const authRoutes = require('../server/routes/auth')
+const jwt = require('jsonwebtoken ');
+const { required } = require('joi');
 
 
 // database connection 
